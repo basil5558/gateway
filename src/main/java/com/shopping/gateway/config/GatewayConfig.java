@@ -18,7 +18,7 @@ public class GatewayConfig {
         return builder.routes()
                 .route("user", r -> r.path("/user/**").filters(f -> f.filter(filter)).uri("lb://user"))
                 .route("cart", r -> r.path("/cart/**").filters(f -> f.filter(filter)).uri("lb://cart"))
-                .route("product", r -> r.path("/products/**").filters(f -> f.filter(filter)).uri("lb://product"))
+                .route("product", r -> r.path("/product/**").filters(f -> f.filter(filter)).uri("lb://product"))
                 .route("review", r -> r.path("/review/**").filters(f -> f.filter(filter)).uri("lb://review")).build();
     }
 
